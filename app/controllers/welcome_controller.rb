@@ -7,4 +7,7 @@ class WelcomeController < ApplicationController
 
   def work
   end
+
+  def mission
+  end
 end

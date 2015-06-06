@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get '/resume', to: 'welcome#resume'
   get '/work', to: 'welcome#work'
+  get '/mission', to: 'welcome#mission'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
