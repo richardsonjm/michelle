@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'pages#index'
   get '/resume', to: 'pages#resume'
-  get '/work', to: 'pages#work'
   get '/mission', to: 'pages#mission'
 
   # Example of regular route:

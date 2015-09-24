@@ -5,9 +5,6 @@ class PagesController < ApplicationController
   def resume
   end
 
-  def work
-  end
-
   def mission
   end
 end
