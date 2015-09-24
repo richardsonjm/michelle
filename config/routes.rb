@@ -6,6 +6,12 @@ Rails.application.routes.draw do
   root 'pages#index'
   get '/resume', to: 'pages#resume'
   get '/mission', to: 'pages#mission'
+  get '/msnbc', to: 'pages#msnbc'
+  get '/pantene', to: 'pages#pantene'
+  get '/purina', to: 'pages#purina'
+  get '/laf', to: 'pages#laf'
+  get '/ruffles', to: 'pages#ruffles'
+  get '/nespresso', to: 'pages#nespresso'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
