@@ -1,5 +1,8 @@
 <ul class="side-nav">
-  <li><%= link_to "resume", resume_path %></li>
-  <li><%= link_to "work", work_path %></li>
+  <li><%= link_to "work", works_path %></li>
+  <% @works.each do |work| %>
+    <li><%= link_to work.client, work %></li>
+  <% end %>
   <li><%= link_to "mission", mission_path %></li>
+  <li><%= link_to "resume", resume_path %></li>
 </ul>

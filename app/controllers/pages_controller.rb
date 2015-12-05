@@ -1,13 +1,17 @@
 class PagesController < ApplicationController
-  def index
+  before_action :set_works
+
+  def home
   end
 
   def resume
   end
 
-  def work
-  end
-
   def mission
   end
+
+  private
+    def set_works
+      @works = Work.all
+    end
 end

@@ -1,0 +1,29 @@
+
+<div class="row">
+  <div class="small-12 columns">
+
+    <p id="notice"><%= notice %></p>
+
+
+    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+      <% @works.each do |work| %>
+        <li>
+          <%= link_to work_path(work) do %>
+            <%= image_tag("placeholder.png") %>
+          <% end %>
+          <ul class="inline-list">
+            <li><%= link_to 'Edit', edit_work_path(work) %></li>
+            <li>
+              <%= link_to 'Destroy', work, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </li>
+          </ul>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<br>
+
+<%= link_to 'New Work', new_work_path %>
+

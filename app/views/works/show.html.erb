@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @work.client %>
+</p>
+
+<p>
+  <strong>Campaign:</strong>
+  <%= @work.campaign %>
+</p>
+
+<p>
+  <strong>Challange:</strong>
+  <%= @work.challange %>
+</p>
+
+<p>
+  <strong>Insight:</strong>
+  <%= @work.insight %>
+</p>
+
+<p>
+  <strong>Outcome:</strong>
+  <%= @work.outcome %>
+</p>
+
+<p>
+  <strong>Results:</strong>
+  <%= @work.results %>
+</p>
+
+<%= link_to 'Edit', edit_work_path(@work) %> |
+<%= link_to 'Back', works_path %>
