@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
+# Use dragonfly for image uploads and attachments
+gem 'dragonfly', '~> 1.0.12'
 # front-end framework
 gem 'foundation-rails'
 # Use SCSS for stylesheets

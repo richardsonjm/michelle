@@ -1,4 +1,6 @@
 class Work < ActiveRecord::Base
+  dragonfly_accessor :image
+
   after_save :update_slug
 
   validates_uniqueness_of :slug
