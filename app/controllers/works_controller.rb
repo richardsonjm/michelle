@@ -51,7 +51,7 @@ class WorksController < ApplicationController
 
   private
     def set_work
-      @work = Work.find(params[:id])
+      @work = Work.find_by_slug(params[:id])
     end
 
     def set_works
