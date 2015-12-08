@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 20151207024746) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "slug"
-    t.string   "image_uid"
-    t.string   "image_name"
+    t.string   "logo_uid"
+    t.string   "logo_name"
   end
 
 end

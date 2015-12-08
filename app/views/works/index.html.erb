@@ -8,7 +8,7 @@
       <% @works.each do |work| %>
         <li>
           <%= link_to work_path(work) do %>
-            <%= image_tag work.image.thumb('300x300').url if work.image_stored? %>
+            <%= image_tag work.logo.thumb('300x300').url if work.logo_stored? %>
           <% end %>
           <ul class="inline-list">
             <li><%= link_to 'Edit', edit_work_path(work) %></li>

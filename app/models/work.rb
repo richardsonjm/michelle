@@ -1,5 +1,5 @@
 class Work < ActiveRecord::Base
-  dragonfly_accessor :image
+  dragonfly_accessor :logo
 
   after_save :update_slug
 
