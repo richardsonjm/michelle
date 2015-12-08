@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151207024746) do
+ActiveRecord::Schema.define(version: 20151208024401) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,4 +30,15 @@ ActiveRecord::Schema.define(version: 20151207024746) do
     t.string   "logo_name"
   end
 
+  create_table "works_images", force: :cascade do |t|
+    t.integer  "work_id"
+    t.string   "image_uid"
+    t.string   "image_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "works_images", ["work_id"], name: "index_works_images_on_work_id", using: :btree
+
+  add_foreign_key "works_images", "works"
 end

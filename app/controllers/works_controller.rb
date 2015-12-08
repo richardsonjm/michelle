@@ -59,6 +59,6 @@ class WorksController < ApplicationController
     end
 
     def work_params
-      params.require(:work).permit(:client, :campaign, :challange, :insight, :outcome, :results, :logo)
+      params.require(:work).permit(:client, :campaign, :challange, :insight, :outcome, :results, :logo, works_images_attributes: [:image])
     end
 end

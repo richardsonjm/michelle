@@ -39,6 +39,9 @@
     <%= f.label :logo %><br>
     <%= f.file_field :logo %>
   </div>
+
+  <%= link_to_add_fields "Add Image", f, :works_images %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -1,5 +1,7 @@
 class Work < ActiveRecord::Base
   dragonfly_accessor :logo
+  has_many :works_images
+  accepts_nested_attributes_for :works_images, allow_destroy: true
 
   after_save :update_slug
 
