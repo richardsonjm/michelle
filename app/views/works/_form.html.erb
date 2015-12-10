@@ -10,39 +10,48 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :client %><br>
-    <%= f.text_field :client %>
-  </div>
-  <div class="field">
-    <%= f.label :campaign %><br>
-    <%= f.text_field :campaign %>
-  </div>
-  <div class="field">
-    <%= f.label :challange %><br>
-    <%= f.text_area :challange %>
-  </div>
-  <div class="field">
-    <%= f.label :insight %><br>
-    <%= f.text_area :insight %>
-  </div>
-  <div class="field">
-    <%= f.label :outcome %><br>
-    <%= f.text_area :outcome %>
-  </div>
-  <div class="field">
-    <%= f.label :results %><br>
-    <%= f.text_area :results %>
-  </div>
-  <div class="field">
-    <%= f.label :logo %><br>
-    <%= f.file_field :logo %>
+  <div class="panel">
+    <h4>Project</h4>
+    <div class="field">
+      <%= f.label :client %><br>
+      <%= f.text_field :client %>
+    </div>
+    <div class="field">
+      <%= f.label :campaign %><br>
+      <%= f.text_field :campaign %>
+    </div>
+    <div class="field">
+      <%= f.label :logo %><br>
+      <%= f.file_field :logo %>
+    </div>
   </div>
 
-  <%= link_to_add_fields "Add Image", f, :works_images %>
+  <div class="panel">
+    <h4>Brief</h4>
+    <div class="field">
+      <%= f.label :challange %><br>
+      <%= f.text_area :challange %>
+    </div>
+    <div class="field">
+      <%= f.label :insight %><br>
+      <%= f.text_area :insight %>
+    </div>
+    <div class="field">
+      <%= f.label :outcome %><br>
+      <%= f.text_area :outcome %>
+    </div>
+    <div class="field">
+      <%= f.label :results %><br>
+      <%= f.text_area :results %>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h4>Work</h4>
+    <%= link_to_add_fields "Add Image", f, :works_images %>
+  </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'button' %>
   </div>
 <% end %>
