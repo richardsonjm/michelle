@@ -1,3 +1,9 @@
 .image-field {
   margin-bottom: rem-calc(10);
 }
+
+a.add_fields {
+  cursor:pointer;
+  color:$primary-color;
+  text-decoration:underline;
+}

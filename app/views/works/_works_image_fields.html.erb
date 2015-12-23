@@ -1,6 +1,7 @@
 <div class="image-field">
-  <%= f.label :image %>
-  <%= f.file_field :image %>
+  <ul class="inline-list">
+    <li><%= f.file_field :image %></li>
+    <li><%= link_to "remove", '#', class: "remove_fields" %></li>
+  </ul>
   <%= f.hidden_field :_destroy %>
-  <%= link_to "remove", '#', class: "remove_fields" %>
 </div>
