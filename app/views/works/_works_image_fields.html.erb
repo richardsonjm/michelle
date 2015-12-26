@@ -1,7 +1,13 @@
-<div class="image-field">
-  <ul class="inline-list">
-    <li><%= f.file_field :image %></li>
-    <li><%= link_to "remove", '#', class: "remove_fields" %></li>
-  </ul>
-  <%= f.hidden_field :_destroy %>
-</div>
+<% if f.object.persisted? %>
+    <span class="file-name">Currently saved: <%= link_to f.object.image_name, f.object.image_url, target: "_blank" %>
+    <label class="file-remove"><%= f.check_box :_destroy %>Remove</label>
+  </span>
+<% else %>
+  <div class="image-field">
+    <ul class="inline-list">
+      <li><%= f.file_field :image %></li>
+      <li><%= link_to "remove", '#', class: "remove_fields" %></li>
+    </ul>
+    <%= f.hidden_field :_destroy %>
+  </div>
+<% end %>

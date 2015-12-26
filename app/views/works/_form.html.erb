@@ -48,6 +48,9 @@
 
   <div class="panel">
     <h4>Work</h4>
+    <%= f.fields_for :works_images do |builder| %>
+      <%= render 'works_image_fields', f: builder %>
+    <% end %>
     <%= link_to_add_fields "Add Image", f, :works_images %>
   </div>
 
