@@ -29,8 +29,12 @@ group :development, :test do
   gem 'spring'
 end
 
-# allows for heroku deployment
-gem 'rails_12factor', group: :production
+group :production do
+  # allows for heroku deployment
+  gem 'rails_12factor'
+  # allows for caching of dragonfly images
+  gem 'rack-cache', :require => 'rack/cache'
+end
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
