@@ -31,7 +31,9 @@
 </p>
 
 <% @work.works_images.each do |works_image| %>
-  <%= image_tag works_image.image.thumb('300x300').url %>
+  <p>
+    <%= image_tag works_image.image.thumb('300x300').url %>
+  </p>
 <% end %>
 
 <%= link_to 'Edit', edit_work_path(@work) %> |
