@@ -4,6 +4,9 @@ ruby '2.2.0'
 
 gem 'rails', '4.2.1'
 
+# Env variables (must be at top)
+gem 'dotenv-rails', :groups => [:development, :test]
+
 # Database
 gem 'pg'
 

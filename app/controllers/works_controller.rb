@@ -1,6 +1,8 @@
 class WorksController < ApplicationController
   before_action :set_work, only: [:show, :edit, :update, :destroy]
   before_action :set_works
+  before_action :authenticate, except: [:index, :show]
+  before_action :set_authenticated, only: [:index, :show]
 
   def index
   end
@@ -60,5 +62,15 @@ class WorksController < ApplicationController
 
     def work_params
       params.require(:work).permit(:client, :campaign, :challange, :insight, :outcome, :results, :logo, works_images_attributes: [:image, :_destroy, :id])
+    end
+
+    def authenticate
+      unless session[:auth_token] == ENV['AUTH_TOKEN']
+        redirect_to root_url
+      end
+    end
+
+    def set_authenticated
+      @authenticated = (session[:auth_token] == ENV['AUTH_TOKEN'])
     end
 end
