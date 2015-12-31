@@ -7,6 +7,8 @@ class Work < ActiveRecord::Base
 
   validates_uniqueness_of :slug
 
+  validates_property :format, of: :logo, in: [:jpeg, :jpg, :png, :bmp], case_sensitive: false,
+                   message: "should be either .jpeg, .jpg, .png, .bmp"
   def to_param
     slug
   end
