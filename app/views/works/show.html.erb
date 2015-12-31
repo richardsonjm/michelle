@@ -10,25 +10,35 @@
   <%= @work.campaign %>
 </p>
 
-<p>
-  <strong>Challange:</strong>
-  <%= @work.challange %>
-</p>
+<div class="row">
+  <div class="small-12 medium-6 large-3 columns">
+    <div class="panel">
+      <h5>Challange:</h5>
+      <p><%= @work.challange %></p>
+    </div>
+  </div>
 
-<p>
-  <strong>Insight:</strong>
-  <%= @work.insight %>
-</p>
+  <div class="small-12 medium-6 large-3 columns">
+    <div class="panel">
+      <h5>Insight:</h5>
+      <p><%= @work.insight %></p>
+    </div>
+  </div>
 
-<p>
-  <strong>Strategy:</strong>
-  <%= @work.strategy %>
-</p>
+  <div class="small-12 medium-6 large-3 columns">
+    <div class="panel">
+      <h5>Strategy:</h5>
+      <p><%= @work.strategy %></p>
+    </div>
+  </div>
 
-<p>
-  <strong>Results:</strong>
-  <%= @work.results %>
-</p>
+  <div class="small-12 medium-6 large-3 columns">
+    <div class="panel">
+      <h5>Results:</h5>
+      <p><%= @work.results %></p>
+    </div>
+  </div>
+</div>
 
 <% @work.works_images.each do |works_image| %>
   <p>
