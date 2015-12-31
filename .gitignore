@@ -17,3 +17,6 @@
 
 # Ignore other unneeded files
 .DS_Store
+
+# Ignore dragonfly image fils
+/public/system/dragonfly

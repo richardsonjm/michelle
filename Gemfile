@@ -12,6 +12,7 @@ gem 'pg'
 
 # Assets
 gem 'dragonfly', '~> 1.0.12'
+gem 'dragonfly-s3_data_store'
 gem 'foundation-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
