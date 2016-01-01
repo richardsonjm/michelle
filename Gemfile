@@ -35,6 +35,8 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
+gem 'shoulda-matchers', require: false, group: :test
+
 group :production do
   # allows for heroku deployment
   gem 'rails_12factor'
