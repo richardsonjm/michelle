@@ -13,6 +13,9 @@ gem 'pg'
 # Factories
 gem 'factory_girl_rails'
 
+# Models
+gem 'attribute_normalizer'
+
 # Assets
 gem 'dragonfly', '~> 1.0.12'
 gem 'dragonfly-s3_data_store'
