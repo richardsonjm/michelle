@@ -16,6 +16,6 @@ class Work < ActiveRecord::Base
   protected
 
   def update_slug
-    self.update_column(:slug, client.parameterize)
+    self.update_column(:slug, "#{client} #{campaign}".parameterize)
   end
 end
