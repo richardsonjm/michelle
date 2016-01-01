@@ -41,7 +41,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'shoulda-matchers', require: false
+  gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers', require: false
   gem 'database_cleaner'
 end
 
