@@ -1,44 +1,48 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<h5>
   <strong>Client:</strong>
   <%= @work.client %>
-</p>
+</h5>
 
-<p>
+<h5>
   <strong>Campaign:</strong>
   <%= @work.campaign %>
-</p>
+</h5>
+
+<hr>
 
 <div class="row" data-equalizer="brief">
   <div class="small-12 medium-6 large-3 columns">
-    <div class="panel" data-equalizer-watch="brief">
-      <h5>Challange:</h5>
+    <p data-equalizer-watch="brief">
+      <h5>Challange</h5>
       <p><%= @work.challange %></p>
-    </div>
+    </p>
   </div>
 
   <div class="small-12 medium-6 large-3 columns">
-    <div class="panel" data-equalizer-watch="brief">
-      <h5>Insight:</h5>
+    <p data-equalizer-watch="brief">
+      <h5>Insight</h5>
       <p><%= @work.insight %></p>
-    </div>
+    </p>
   </div>
 
   <div class="small-12 medium-6 large-3 columns">
-    <div class="panel" data-equalizer-watch="brief">
-      <h5>Strategy:</h5>
+    <p data-equalizer-watch="brief">
+      <h5>Strategy</h5>
       <p><%= @work.strategy %></p>
-    </div>
+    </p>
   </div>
 
   <div class="small-12 medium-6 large-3 columns">
-    <div class="panel" data-equalizer-watch="brief">
-      <h5>Results:</h5>
+    <p data-equalizer-watch="brief">
+      <h5>Results</h5>
       <p><%= @work.results %></p>
-    </div>
+    </p>
   </div>
 </div>
+
+<hr>
 
 <% @work.works_images.each do |works_image| %>
   <p class="work-image">
