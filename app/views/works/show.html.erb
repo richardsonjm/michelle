@@ -41,7 +41,7 @@
 </div>
 
 <% @work.works_images.each do |works_image| %>
-  <p>
+  <p class="work-image">
     <%= image_tag works_image.image.thumb('300x300').url %>
   </p>
 <% end %>
