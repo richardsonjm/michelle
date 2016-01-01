@@ -10,6 +10,9 @@ gem 'dotenv-rails', :groups => [:development, :test]
 # Database
 gem 'pg'
 
+# Factories
+gem 'factory_girl_rails'
+
 # Assets
 gem 'dragonfly', '~> 1.0.12'
 gem 'dragonfly-s3_data_store'

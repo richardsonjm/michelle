@@ -72,6 +72,11 @@ GEM
     eventmachine (1.0.8)
     excon (0.45.4)
     execjs (2.5.2)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
     ffi (1.9.6)
     fog-aws (0.7.6)
       fog-core (~> 1.27)
@@ -262,6 +267,7 @@ DEPENDENCIES
   dotenv-rails
   dragonfly (~> 1.0.12)
   dragonfly-s3_data_store
+  factory_girl_rails
   foundation-rails
   guard-rspec
   jbuilder (~> 2.0)
