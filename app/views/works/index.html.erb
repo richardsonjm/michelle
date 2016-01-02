@@ -3,29 +3,32 @@
 
     <p id="notice"><%= notice %></p>
 
+    <% if @authenticated %>
+      <%= link_to 'Add new case study', new_work_path %>
+      <hr>
+    <% end %>
 
     <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
       <% @works.each do |work| %>
-        <li>
+        <li class="work-item">
           <%= link_to work_path(work) do %>
-            <%= image_tag work.logo.thumb('300x300').url if work.logo_stored? %>
-          <% end %>
-          <% if @authenticated %>
-            <ul class="inline-list">
-              <li><%= link_to 'Edit', edit_work_path(work) %></li>
-              <li>
-                <%= link_to 'Destroy', work, method: :delete, data: { confirm: 'Are you sure?' } %>
-              </li>
-            </ul>
+            <div class="thumb-image">
+              <span class="helper"></span>
+              <%= image_tag work.logo.thumb('200x200').url if work.logo_stored? %></br>
+            </div>
+            <div class="thumb-title">
+              <%= "#{work.client} '#{work.campaign}'" %>
+              <% if @authenticated %>
+                </br>
+                <div class="work-crud">
+                  <%= link_to 'Edit', edit_work_path(work) %> |
+                  <%= link_to 'Destroy', work, method: :delete, data: { confirm: 'Are you sure?' } %>
+                </div>
+              <% end %>
+            </div>
           <% end %>
         </li>
       <% end %>
     </ul>
   </div>
 </div>
-
-<br>
-
-<% if @authenticated %>
-  <%= link_to 'New Work', new_work_path %>
-<% end %>

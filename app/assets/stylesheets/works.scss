@@ -11,3 +11,22 @@ a.add_fields {
 p.work-image {
   text-align: center;
 }
+
+div.thumb-image {
+  height: 200px;
+  img {
+    vertical-align: middle;
+    max-height: 200px;
+    max-width: 200px;
+  }
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+div.thumb-title {
+  margin-top: rem_calc(20);
+}
