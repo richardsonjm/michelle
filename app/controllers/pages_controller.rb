@@ -11,6 +11,9 @@ class PagesController < ApplicationController
   def mission
   end
 
+  def resume
+  end
+
   private
     def set_works
       @works = Work.all
