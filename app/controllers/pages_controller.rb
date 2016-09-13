@@ -5,9 +5,6 @@ class PagesController < ApplicationController
   def home
   end
 
-  def mission
-  end
-
   private
     def set_works
       @works = Work.all
