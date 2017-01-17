@@ -3,7 +3,8 @@ class Work < ActiveRecord::Base
   has_many :works_images
   accepts_nested_attributes_for :works_images, allow_destroy: true
 
-  after_save :update_slug, :add_rank
+  after_create :add_rank
+  after_save :update_slug
 
   validates_uniqueness_of :slug
 
