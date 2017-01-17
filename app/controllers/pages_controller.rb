@@ -6,10 +6,6 @@ class PagesController < ApplicationController
   end
 
   private
-    def set_works
-      @works = Work.all
-    end
-
     def set_session_token
       session[:auth_token] = params[:auth_token] unless session[:auth_token]
     end

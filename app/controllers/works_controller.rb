@@ -56,10 +56,6 @@ class WorksController < ApplicationController
       @work = Work.find_by_slug(params[:id])
     end
 
-    def set_works
-      @works = Work.all
-    end
-
     def work_params
       params.require(:work).permit(:client, :campaign, :challange, :insight, :strategy, :results, :logo, works_images_attributes: [:image, :_destroy, :id])
     end
