@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151231233856) do
+ActiveRecord::Schema.define(version: 20170117203754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,11 +23,12 @@ ActiveRecord::Schema.define(version: 20151231233856) do
     t.text     "insight"
     t.text     "strategy"
     t.text     "results"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.string   "slug"
     t.string   "logo_uid"
     t.string   "logo_name"
+    t.integer  "rank",       default: 0, null: false
   end
 
   create_table "works_images", force: :cascade do |t|

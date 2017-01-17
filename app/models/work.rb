@@ -3,7 +3,7 @@ class Work < ActiveRecord::Base
   has_many :works_images
   accepts_nested_attributes_for :works_images, allow_destroy: true
 
-  after_save :update_slug
+  after_save :update_slug, :add_rank
 
   validates_uniqueness_of :slug
 
@@ -17,5 +17,9 @@ class Work < ActiveRecord::Base
 
   def update_slug
     self.update_column(:slug, "#{client} #{campaign}".parameterize)
+  end
+
+  def add_rank
+    self.update_column(:rank, Work.count)
   end
 end
